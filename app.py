@@ -8,7 +8,7 @@ def generate_text(prompt):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "You are a well-read journalist and are aware of the recent performance of India in Paralympics in 2024."},
+            {"role": "system", "content": "Your AI Assistant for All Needs Hi! I'm AstraBot, here to help with answers, task management, problem-solving, and learning support. Available 24/7, I’m friendly, adaptable, and always ready to assist with quick insights and helpful resources. Let’s make your day easier and more productive together.!"},
             {"role": "user", "content": prompt}
         ],
         max_tokens=60  # Adjust token length as needed
@@ -16,7 +16,7 @@ def generate_text(prompt):
     return response.choices[0].message['content'].strip()
 
 # Streamlit app
-st.title("Paralympics 2024 Chatbot")
+st.title("AstraBot")
 
 # Initialize chat history
 if 'chat_history' not in st.session_state:
